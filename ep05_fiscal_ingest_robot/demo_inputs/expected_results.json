@@ -1,0 +1,91 @@
+{
+  "_comment": [
+    "EP05 expected truth. Written BEFORE the first processing run, from the business story.",
+    "Never edit this file to make a wrong extraction PASS. Quarantine can be a correct outcome; a silently wrong write cannot.",
+    "Prices are USD before sales tax. tax_class is the tarifa.porez code, sales_unit is jmjera.nazivskr."
+  ],
+  "sku_range": [95001, 95099],
+  "seed": {
+    "95001": {"name": "Espresso Beans 1 lb", "price": "12.99", "tax_class": "T", "sales_unit": "EA"},
+    "95002": {"name": "Cane Sugar 4 lb", "price": "4.49", "tax_class": "E", "sales_unit": "EA"},
+    "95003": {"name": "Paper Cups 12 oz 50 ct", "price": "6.99", "tax_class": "T", "sales_unit": "EA"},
+    "95004": {"name": "Bottled Water 16.9 oz", "price": "1.29", "tax_class": "T", "sales_unit": "EA"},
+    "95005": {"name": "Whole Milk 1 gal", "price": "4.19", "tax_class": "E", "sales_unit": "EA"}
+  },
+  "documents": {
+    "register_update_message.txt": {
+      "kind": "text",
+      "items": {
+        "95010": {"outcome": ["INSERT", "NO_CHANGE"]},
+        "95011": {"outcome": ["INSERT"]},
+        "95012": {"outcome": ["QUARANTINE"], "reason": ["MISSING_PRICE", "PRICE_NOT_IN_SOURCE"]},
+        "95001": {"outcome": ["UPDATE"], "old_price": "12.99", "new_price": "13.49"}
+      }
+    },
+    "approved_retail_price_update.pdf": {
+      "kind": "pdf",
+      "row_count": 20,
+      "items": {
+        "95020": {"outcome": ["INSERT"]}, "95021": {"outcome": ["INSERT"]}, "95022": {"outcome": ["INSERT"]},
+        "95023": {"outcome": ["INSERT"]}, "95024": {"outcome": ["INSERT"]}, "95025": {"outcome": ["INSERT"]},
+        "95026": {"outcome": ["INSERT"]}, "95027": {"outcome": ["INSERT"]}, "95028": {"outcome": ["INSERT"]},
+        "95029": {"outcome": ["INSERT"]}, "95030": {"outcome": ["INSERT"]}, "95031": {"outcome": ["INSERT"]},
+        "95032": {"outcome": ["INSERT"]},
+        "95033": {"outcome": ["QUARANTINE"], "reason": ["UNKNOWN_TAX_CLASS"]},
+        "95034": {"outcome": ["INSERT"]}, "95035": {"outcome": ["INSERT"]}, "95036": {"outcome": ["INSERT"]},
+        "95037": {"outcome": ["INSERT"]}, "95038": {"outcome": ["INSERT"]},
+        "95003": {"outcome": ["QUARANTINE"], "reason": ["IDENTITY_CONFLICT"]}
+      }
+    },
+    "shelf_tags_photo.jpg": {
+      "kind": "image",
+      "items": {
+        "95040": {"outcome": ["INSERT"]},
+        "95041": {"outcome": ["INSERT"]},
+        "95010": {"outcome": ["INSERT", "NO_CHANGE"]}
+      }
+    }
+  },
+  "after_three_documents": {
+    "article_count": 27,
+    "open_quarantine_skus": [95003, 95012, 95033],
+    "articles": {
+      "95001": {"name": "Espresso Beans 1 lb", "price": "13.49", "tax_class": "T", "sales_unit": "EA"},
+      "95002": {"name": "Cane Sugar 4 lb", "price": "4.49", "tax_class": "E", "sales_unit": "EA"},
+      "95003": {"name": "Paper Cups 12 oz 50 ct", "price": "6.99", "tax_class": "T", "sales_unit": "EA"},
+      "95004": {"name": "Bottled Water 16.9 oz", "price": "1.29", "tax_class": "T", "sales_unit": "EA"},
+      "95005": {"name": "Whole Milk 1 gal", "price": "4.19", "tax_class": "E", "sales_unit": "EA"},
+      "95010": {"name": "Oat Milk 64 oz", "price": "4.79", "tax_class": "T", "sales_unit": "EA"},
+      "95011": {"name": "Blueberry Muffin", "price": "2.99", "tax_class": "T", "sales_unit": "EA"},
+      "95020": {"name": "Ground Coffee Medium 12 oz", "price": "8.99", "tax_class": "T", "sales_unit": "EA"},
+      "95021": {"name": "Green Tea 20 ct", "price": "3.49", "tax_class": "E", "sales_unit": "EA"},
+      "95022": {"name": "Peanut Butter 16 oz", "price": "3.79", "tax_class": "E", "sales_unit": "EA"},
+      "95023": {"name": "Strawberry Jam 18 oz", "price": "3.29", "tax_class": "E", "sales_unit": "EA"},
+      "95024": {"name": "Honey 12 oz", "price": "5.99", "tax_class": "E", "sales_unit": "EA"},
+      "95025": {"name": "Paper Towels 6 Roll", "price": "9.49", "tax_class": "T", "sales_unit": "EA"},
+      "95026": {"name": "Dish Soap 19 oz", "price": "2.99", "tax_class": "T", "sales_unit": "EA"},
+      "95027": {"name": "Trash Bags 13 gal 40 ct", "price": "8.79", "tax_class": "T", "sales_unit": "EA"},
+      "95028": {"name": "AA Batteries 8 pk", "price": "7.99", "tax_class": "T", "sales_unit": "EA"},
+      "95029": {"name": "Bananas", "price": "0.69", "tax_class": "E", "sales_unit": "LB"},
+      "95030": {"name": "Gala Apples", "price": "1.89", "tax_class": "E", "sales_unit": "LB"},
+      "95031": {"name": "Orange Juice 52 oz", "price": "3.99", "tax_class": "E", "sales_unit": "EA"},
+      "95032": {"name": "Spring Water 1 gal", "price": "1.39", "tax_class": "E", "sales_unit": "GAL"},
+      "95034": {"name": "Potato Chips 8 oz", "price": "4.29", "tax_class": "T", "sales_unit": "EA"},
+      "95035": {"name": "Chocolate Bar 3.5 oz", "price": "2.49", "tax_class": "T", "sales_unit": "EA"},
+      "95036": {"name": "Paper Napkins 250 ct", "price": "3.99", "tax_class": "T", "sales_unit": "EA"},
+      "95037": {"name": "Plastic Forks 48 ct", "price": "2.29", "tax_class": "T", "sales_unit": "EA"},
+      "95038": {"name": "Hand Sanitizer 8 oz", "price": "3.49", "tax_class": "T", "sales_unit": "EA"},
+      "95040": {"name": "Granola Bar 1.5 oz", "price": "1.49", "tax_class": "T", "sales_unit": "EA"},
+      "95041": {"name": "Sparkling Water 12 oz", "price": "1.19", "tax_class": "T", "sales_unit": "EA"}
+    }
+  },
+  "operator_resolution": {
+    "sku": 95012,
+    "price": "3.49",
+    "expected_article": {"name": "Mint Tea 20 ct", "price": "3.49", "tax_class": "T", "sales_unit": "EA"},
+    "expected_value_source": "operator"
+  },
+  "after_resolution": {"article_count": 28, "open_quarantine_skus": [95003, 95033]},
+  "after_replay": {"article_count": 28, "open_quarantine_skus": [95003, 95033]},
+  "after_fail_probe": {"article_count": 28, "open_quarantine_skus": [95003, 95033], "snapshot_must_be_identical": true}
+}

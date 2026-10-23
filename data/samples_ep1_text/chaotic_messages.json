@@ -1,0 +1,32 @@
+[
+  {
+    "id": "msg_01_clean_order",
+    "title": "1. Clean Field SMS (All fields present)",
+    "source_name": "sms_mike_job402.txt",
+    "text": "Hey Sarah, picked up parts from Home Depot for Job #402: 12x Eaton 20A Circuit Breakers (SKU: BR120) at $14.50 each (line total $174.00) and 4x Square D Junction Boxes at $8.25 each (line total $33.00). Total on receipt is $207.00."
+  },
+  {
+    "id": "msg_02_missing_unit_price",
+    "title": "2. Missing Unit Price (Must return null, NOT hallucinate)",
+    "source_name": "whatsapp_dave_job409.txt",
+    "text": "Yo, grabbed 3 spools of 12/2 Romex NM-B wire from Lowe's for Job #409. Receipt got smudged so I don't see the price per spool, just says total was $285.00. Also grabbed a Klein wire stripper, no price listed yet."
+  },
+  {
+    "id": "msg_03_missing_quantity",
+    "title": "3. Missing Quantity (Ambiguous shorthand note)",
+    "source_name": "email_warehouse_restock.txt",
+    "text": "Vendor: DigiKey Electronics | PO-8821. Ordered STM32F401RET6 microcontrollers at $4.80 unit price, plus a bunch of 10k Ohm 0805 SMD resistors (part RC0805FR-0710KL) at $0.02 each — forgot how many reels we put in the cart."
+  },
+  {
+    "id": "msg_04_math_mismatch_trap",
+    "title": "4. Arithmetic Mismatch Trap (Tests Layer 2 Pydantic Validator)",
+    "source_name": "sms_typo_job512.txt",
+    "text": "Bought from Grainger for Job #512: 5x Industrial DIN Rail Power Supplies 24V (SKU: SDR-120-24) at $45.00 each, line total $225.00. Also 2x Omron Relays at $15.00 each, line total $30.00. Overall invoice total written at bottom is $290.00."
+  },
+  {
+    "id": "msg_05_chaotic_voice_note",
+    "title": "5. Chaotic Voice-to-Text Transcript (Filler words & noise)",
+    "source_name": "voicenote_van_repair.txt",
+    "text": "Uh hey office, this is Carlos... I'm at AutoZone right now for Fleet Van #3, uh wait no Job #701. I got two AGM batteries at $199.99 a piece, that's $399.98, and um some windshield wiper fluid, 3 gallons, didn't check the price on the fluid. Put it on the company card."
+  }
+]

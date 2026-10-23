@@ -1,0 +1,6 @@
+ROLLBACK TEST ONLY - fail_probe.txt - not a real register update.
+Used only with --demo-failure-injection. All prices USD, before sales tax. Effective today.
+Set Cane Sugar 4 lb, SKU 95002, to $4.79 effective today.
+95050 Rollback Probe Item A | EA | tax T | $1.00
+95051 Rollback Probe Item B | EA | tax T | $1.00
+95052 Rollback Probe Item C | EA | tax T | $1.00

@@ -1,0 +1,4 @@
+# EP05 demo documents are binary: never convert line endings (a PDF breaks if CRLF is added)
+ep05_fiscal_ingest_robot/demo_inputs/*.pdf binary
+ep05_fiscal_ingest_robot/demo_inputs/*.jpg binary
+tests/fixtures/*.jpg binary

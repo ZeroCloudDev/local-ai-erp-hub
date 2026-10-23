@@ -1,0 +1,91 @@
+# =====================================================================
+# EP05 POS adapter configuration — EXAMPLE for the kasa_ep05 test database.
+#
+# Copy to pos_adapter_config.toml (git-ignored) and adjust.
+# Every line marked "ADAPT HERE" is a decision that belongs to the target
+# POS, not to the generic pipeline. For some POS systems a config change is
+# NOT enough: they need new adapter code or their supported import/API.
+#
+# No secrets in this file. The DB password comes from EP05_DB_PASSWORD.
+# =====================================================================
+
+profile_version = "ep05-maple-street-v1"   # stored with every processed document
+
+[database]
+host = "127.0.0.1"
+port = 3306
+user = "ep05_demo"
+database = "kasa_ep05"            # ADAPT HERE: target database name
+password_env = "EP05_DB_PASSWORD" # env variable that holds the password
+
+[model]
+# Local Ollama model used for the message and the OCR rows (EP01 mechanism).
+# The PDF table is mapped deterministically, without a model.
+name = "qwen2.5:3b"
+
+[folders]
+# Relative paths are resolved against the repository root.
+incoming = "data/ep05_incoming"
+work = "data/ep05_work"           # private copies are processed here
+archive = "data/ep05_archive"     # committed/ , quarantine/ , duplicates/ , failed/
+
+[range]
+# The demo only touches this SKU range. Anything else is quarantined.
+sku_min = 95001                   # ADAPT HERE
+sku_max = 95099                   # ADAPT HERE
+name_max_len = 50                 # = artikli.naziv varchar(50); we never truncate
+max_price = "999.99"              # sanity ceiling for a shelf price
+
+[currency]
+required = "USD"                  # ADAPT HERE: the POS price-list currency
+
+# Source tax class code -> tarifa.id.  This is an APPROVED mapping, not a guess.
+# A code that is not listed here (e.g. "X") goes to quarantine.
+[tax_class_map]                   # ADAPT HERE
+T = 1
+TAXABLE = 1
+E = 2
+EXEMPT = 2
+
+# Source sales unit -> jmjera.id. Synonyms map to the same id.
+[sales_unit_map]                  # ADAPT HERE
+EA = 1
+EACH = 1
+LB = 2
+POUND = 2
+GAL = 3
+GALLON = 3
+
+# Which artcjenik row is "the" shelf price for an article.
+# The adapter, the report and verify_demo all build the same WHERE clause
+# from these values, so they can never disagree about which row counts.
+[price_list_selector]             # ADAPT HERE
+cjnaziv = "OSNOVNI"
+loc = "0"
+pjs = 1
+# deleted = 0 is always required
+
+# Explicit TEST values written into new rows. They are NOT confirmed
+# settings of a real POS installation.
+[pos_test_values]                 # ADAPT HERE
+sank = 1
+kasa = 0
+grupa = 1
+upd = 2
+artcjenik_br = 1
+idd = "ep05-adapter"
+
+[watch]
+stable_checks = 3                 # size+mtime must be unchanged this many times in a row
+stable_interval_s = 0.4
+max_wait_s = 60
+retry_limit = 3
+ignore_suffixes = [".part", ".tmp", ".crdownload", ".partial"]
+
+[ocr]
+# Any OCR box below this score in a SKU row -> OCR_UNCERTAIN (review).
+# CALIBRATE on the real phone photo and write the observed scores into the
+# rehearsal log. The main protection is not this number but the rule that
+# SKU, name and price must be found on the same OCR row.
+min_confidence = 0.60
+y_tolerance_px = 24.0             # same value as EP03 sort_ocr_boxes_into_rows

@@ -1,0 +1,46 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.venv/
+venv/
+ENV/
+
+# Databases & local outputs
+*.db
+*.sqlite3
+*.log
+*.jpg
+data/processed_watch/*
+!data/processed_watch/.gitkeep
+data/incoming_watch/*
+!data/incoming_watch/.gitkeep
+
+# OS & IDE
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Internal rules & docs
+AGENTS.md
+docs/
+*.tmp
+
+# EP05 runtime folders and the local (password-free, but machine-specific) config
+data/ep05_incoming/
+data/ep05_work/
+data/ep05_archive/
+data/ep05_manual/
+ep05_fiscal_ingest_robot/pos_adapter_config.toml
+# EP05 synthetic demo images ARE published (exceptions to *.jpg above)
+!ep05_fiscal_ingest_robot/demo_inputs/shelf_tags_photo.jpg
+!tests/fixtures/ep05_simulated_shelf_photo.jpg
+
+# EP05 local DB password (never published)
+ep05_fiscal_ingest_robot/.ep05_db_password
+
+# EP05 watcher smoke-test runtime data (never published)
+data/ep05_watcher_smoke/
