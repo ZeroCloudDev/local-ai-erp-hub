@@ -261,7 +261,10 @@ def with_check(expected: str, actual: str, correct: bool, note: str, extra: list
     return REVIEW, expected == REVIEW, "; ".join(extra)[:200]
 
 
-def run_documents(model: str, cfg, synthetic: dict | None = None, check: bool = False) -> list[dict]:
+def run_documents(model: str, cfg, synthetic: dict | None = None, check: bool = False,
+                  on_row=None) -> list[dict]:
+    """Score every document. `on_row(row)` is called as soon as each document is done,
+    so progress is printed live instead of after the whole pass (~11 min)."""
     rows = []
 
     def add(episode, doc_id, expected, actual, correct, wrongly_approved, seconds,
@@ -275,6 +278,8 @@ def run_documents(model: str, cfg, synthetic: dict | None = None, check: bool = 
                          wrongly_approved_without_check=int(base[2]),
                          seconds=round(seconds, 2), eval_tokens=eval_tokens,
                          eval_ms=round(eval_ms, 1), model_calls=model_calls, note=note))
+        if on_row:
+            on_row(rows[-1])
 
     def failed(episode, doc_id, expected, t0, exc, doc_set="original"):
         # Invalid JSON or a crash writes nothing, so it is never an approval;
@@ -532,12 +537,13 @@ def main() -> int:
             load_s, warmup_s = warm_up(model, warmup_text)
             rows = []
             for r in range(args.repeat):
-                for row in run_documents(model, cfg, synthetic, check=args.completeness_check):
-                    row.update(model=model, run=r + 1)
-                    rows.append(row)
+                def show(row):
                     print(f"  {row['episode']} {row['document']:<34} expected={row['expected']:<10} "
                           f"actual={row['actual']:<10} {'OK ' if row['correct'] else 'BAD'} {row['seconds']} s",
                           flush=True)
+                for row in run_documents(model, cfg, synthetic, check=args.completeness_check, on_row=show):
+                    row.update(model=model, run=r + 1)
+                    rows.append(row)
         ps = {m["model"]: m for m in ollama.ps().get("models", [])}
         size_ollama = (ps.get(model) or ps.get(f"{model}:latest") or {}).get("size", 0)
         n = len(rows)
