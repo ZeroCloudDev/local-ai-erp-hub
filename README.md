@@ -5,6 +5,8 @@ Deterministic, **100% offline business automation pipeline** that turns messy fi
 > 📖 **Looking for in-depth source code explanations?**
 > Because source file line numbers are strictly locked to match the recorded YouTube video series, complete architectural and module explanations are documented in **[CODE_WALKTHROUGH.md](./CODE_WALKTHROUGH.md)** without displacing any source lines.
 
+> 🧾 **Season 1 ERRATA (measured 2026-10-23 to 26):** what works, what breaks and what you still have to build yourself is in **[ERRATA.md](./ERRATA.md)**. In that test the series model `qwen2.5:3b` approved one wrong row and is non-commercial; `granite4:3b` (Apache-2.0) passed every rule. The episode code is unchanged; the benchmark is in [`benchmarks/`](./benchmarks/).
+
 ---
 
 ## ⚡ Fast Track: Run the Experiment in 60 Seconds
@@ -223,7 +225,7 @@ For complete function-by-function explanations without changing line numbers, se
 This system is an engineering framework designed for offline back-office ingestion, not an infallible accounting oracle. Production deployers should understand its strict architectural boundaries:
 
 1. **Arithmetic Audit vs Semantic Correctness:** The Layer 2 Pydantic validator verifies internal mathematical consistency (`quantity * unit_price = line_total` and `sum(line_totals) == stated_total`). It flags null values, missing prices, and arithmetic mismatches. However, if an OCR/LLM misreads a vendor name or swaps two line items with identical prices, pure arithmetic checks will not detect the error. Such records must be caught by vendor reconciliation or manual audit.
-2. **Model Swappability & Latency:** Benchmarks in this repository (435 ms OCR, ~19 tok/s, 2.2 GB RAM footprint) were measured specifically with `qwen2.5:3b` on an AMD Ryzen 7 PRO CPU. The extraction architecture in `core/llm_client.py` uses standard Ollama endpoints and can be swapped with larger models (e.g., Llama 3.1 8B, Qwen 2.5 7B/14B) without code changes, though RAM usage and inference latency will scale accordingly.
+2. **Model Swappability & Latency:** Benchmarks in this repository (435 ms OCR, ~19 tok/s, 2.2 GB RAM footprint) were measured specifically with `qwen2.5:3b` on an AMD Ryzen 7 PRO CPU. The extraction architecture in `core/llm_client.py` uses standard Ollama endpoints and can be swapped with other models without code changes. Swapping is not a free upgrade: in the [ERRATA](./ERRATA.md) benchmark `qwen2.5:7b` was much weaker than `qwen2.5:3b`. Run [`benchmarks/`](./benchmarks/) on your own documents before switching.
 3. **Synthetic Test Data vs Public Benchmarks:** Test assets provided in `data/` were synthetically generated (using `data/generate_test_assets.py`) to systematically stress-test specific arithmetic edge cases (e.g. unpriced items, tax rounding traps, skewed thermal scans). Formal character error rate (CER) and extraction accuracy metrics on public benchmark datasets (such as SROIE or CORD) have not been formally evaluated.
 
 ---
@@ -244,7 +246,7 @@ This system is an engineering framework designed for offline back-office ingesti
 
 This repository's source code is distributed under the **MIT License**. However, production deployment uses third-party components governed by their respective licenses:
 
-* **Qwen 2.5 3B (`qwen2.5:3b`):** Governed by the [Qwen Research License Agreement](https://huggingface.co/Qwen/Qwen2.5-3B-Instruct/raw/main/LICENSE) (free for research and evaluation; commercial production requires an Alibaba Cloud license request). All benchmark figures in this repo (435 ms, ~19 tok/s, 2.2 GB RAM) are measured specifically on the 3B model. For Apache 2.0 commercial deployments, models like Qwen 2.5 7B can be swapped into `core/llm_client.py` (hardware memory and token generation speed will scale accordingly).
+* **Qwen 2.5 3B (`qwen2.5:3b`):** Governed by the [Qwen Research License Agreement](https://huggingface.co/Qwen/Qwen2.5-3B-Instruct/raw/main/LICENSE) (free for research and evaluation; commercial production requires an Alibaba Cloud license request). All benchmark figures in this repo (435 ms, ~19 tok/s, 2.2 GB RAM) are measured specifically on the 3B model. For Apache 2.0 commercial deployments, another model can be set in `core/llm_client.py`; see [ERRATA.md](./ERRATA.md) for which models passed the benchmark rules (`granite4:3b`, `ministral-3:8b`).
 * **PyMuPDF (`fitz` / `pymupdf4llm`):** Distributed under **AGPL-3.0** (or commercial license from Artifex Software, Inc.). Note: If building a networked commercial service incorporating PyMuPDF under AGPL-3.0, you may be required to disclose source code under the same terms.
 * **RapidOCR (`rapidocr_onnxruntime`):** Distributed under the **Apache-2.0** License.
 * **Pydantic & SQLite:** Distributed under the **MIT** and Public Domain licenses respectively.
