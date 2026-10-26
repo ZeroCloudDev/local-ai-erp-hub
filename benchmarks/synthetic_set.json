@@ -1,0 +1,1113 @@
+{
+  "seed": 20261023,
+  "catalog": {
+    "BR120": {
+      "name": "Eaton 20A Circuit Breaker",
+      "unit": "each",
+      "unit_price": 14.5
+    },
+    "QO115": {
+      "name": "Square D 15A Circuit Breaker",
+      "unit": "each",
+      "unit_price": 11.75
+    },
+    "JB-4SQ": {
+      "name": "Square D Junction Box",
+      "unit": "each",
+      "unit_price": 8.25
+    },
+    "SDR-120-24": {
+      "name": "DIN Rail Power Supply 24V",
+      "unit": "each",
+      "unit_price": 45.0
+    },
+    "G2R-1-E": {
+      "name": "Omron Relay 12V",
+      "unit": "each",
+      "unit_price": 15.0
+    },
+    "NM12-2-250": {
+      "name": "Romex 12/2 NM-B Wire 250 ft Spool",
+      "unit": "each",
+      "unit_price": 95.0
+    },
+    "KL-11055": {
+      "name": "Klein Wire Stripper",
+      "unit": "each",
+      "unit_price": 19.99
+    },
+    "STM32F401RET6": {
+      "name": "STM32F401 Microcontroller",
+      "unit": "each",
+      "unit_price": 4.8
+    },
+    "ESP32-S3-WROOM-1": {
+      "name": "ESP32-S3 Module",
+      "unit": "each",
+      "unit_price": 3.9
+    },
+    "AGM-H6": {
+      "name": "AGM Battery H6",
+      "unit": "each",
+      "unit_price": 199.99
+    },
+    "WW-1G": {
+      "name": "Windshield Washer Fluid 1 gal",
+      "unit": "each",
+      "unit_price": 3.49
+    },
+    "WAGO-221-413": {
+      "name": "Wago Lever Connector 3-port",
+      "unit": "each",
+      "unit_price": 0.89
+    },
+    "LED-A19-9W": {
+      "name": "LED Bulb A19 9W",
+      "unit": "each",
+      "unit_price": 2.75
+    },
+    "GFCI-20": {
+      "name": "Leviton 20A GFCI Outlet",
+      "unit": "each",
+      "unit_price": 22.5
+    },
+    "EMT-12-10": {
+      "name": "1/2 in EMT Conduit 10 ft",
+      "unit": "each",
+      "unit_price": 7.48
+    },
+    "PVC-S40-1": {
+      "name": "1 in PVC Pipe Schedule 40 10 ft",
+      "unit": "each",
+      "unit_price": 6.12
+    },
+    "TAPE-33": {
+      "name": "3M Super 33+ Electrical Tape",
+      "unit": "each",
+      "unit_price": 6.97
+    },
+    "CB-6-50": {
+      "name": "Cat6 Patch Cable 50 ft",
+      "unit": "each",
+      "unit_price": 12.4
+    }
+  },
+  "warmup": {
+    "id": "warmup",
+    "text": "Hi office, Job #100 at Home Depot: 2x Eaton 20A Circuit Breaker (SKU: BR120) at $14.50 each (line total $29.00). Total $29.00."
+  },
+  "messages": [
+    {
+      "id": "syn_easy_01",
+      "level": "easy",
+      "category": "clean",
+      "text": "Hi team, Jen here. Picked up from AutoZone for Job #546: 5x Windshield Washer Fluid 1 gal (SKU: WW-1G) at $3.49 each (line total $17.45). Total on receipt is $17.45.",
+      "expected": "APPROVED",
+      "stated_total": 17.45,
+      "lines": [
+        {
+          "sku": "WW-1G",
+          "quantity": 5,
+          "unit_price": 3.49,
+          "line_total": 17.45
+        }
+      ],
+      "why": "all fields written, totals match"
+    },
+    {
+      "id": "syn_easy_02",
+      "level": "easy",
+      "category": "clean",
+      "text": "Vendor: AutoZone | Job #565. 5x Leviton 20A GFCI Outlet (SKU: GFCI-20) at $22.50 each (line total $112.50) and 4x LED Bulb A19 9W (SKU: LED-A19-9W) at $2.75 each (line total $11.00). Receipt total $123.50.",
+      "expected": "APPROVED",
+      "stated_total": 123.5,
+      "lines": [
+        {
+          "sku": "GFCI-20",
+          "quantity": 5,
+          "unit_price": 22.5,
+          "line_total": 112.5
+        },
+        {
+          "sku": "LED-A19-9W",
+          "quantity": 4,
+          "unit_price": 2.75,
+          "line_total": 11.0
+        }
+      ],
+      "why": "all fields written, totals match"
+    },
+    {
+      "id": "syn_easy_03",
+      "level": "easy",
+      "category": "clean",
+      "text": "Kim, bought at Home Depot for Job #598: 12x STM32F401 Microcontroller (SKU: STM32F401RET6) at $4.80 each (line total $57.60). Total $57.60. - Mike",
+      "expected": "APPROVED",
+      "stated_total": 57.6,
+      "lines": [
+        {
+          "sku": "STM32F401RET6",
+          "quantity": 12,
+          "unit_price": 4.8,
+          "line_total": 57.6
+        }
+      ],
+      "why": "all fields written, totals match"
+    },
+    {
+      "id": "syn_easy_04",
+      "level": "easy",
+      "category": "clean",
+      "text": "team, bought at Lowe's for Job #331: 5x DIN Rail Power Supply 24V (SKU: SDR-120-24) at $45.00 each (line total $225.00) and 5x Klein Wire Stripper (SKU: KL-11055) at $19.99 each (line total $99.95). Total $324.95. - Mike",
+      "expected": "APPROVED",
+      "stated_total": 324.95,
+      "lines": [
+        {
+          "sku": "SDR-120-24",
+          "quantity": 5,
+          "unit_price": 45.0,
+          "line_total": 225.0
+        },
+        {
+          "sku": "KL-11055",
+          "quantity": 5,
+          "unit_price": 19.99,
+          "line_total": 99.95
+        }
+      ],
+      "why": "all fields written, totals match"
+    },
+    {
+      "id": "syn_easy_05",
+      "level": "easy",
+      "category": "clean",
+      "text": "Hi team, Jen here. Picked up from AutoZone for Job #923: 20x ESP32-S3 Module (SKU: ESP32-S3-WROOM-1) at $3.90 each (line total $78.00) and 10x Wago Lever Connector 3-port (SKU: WAGO-221-413) at $0.89 each (line total $8.90). Total on receipt is $86.90.",
+      "expected": "APPROVED",
+      "stated_total": 86.9,
+      "lines": [
+        {
+          "sku": "ESP32-S3-WROOM-1",
+          "quantity": 20,
+          "unit_price": 3.9,
+          "line_total": 78.0
+        },
+        {
+          "sku": "WAGO-221-413",
+          "quantity": 10,
+          "unit_price": 0.89,
+          "line_total": 8.9
+        }
+      ],
+      "why": "all fields written, totals match"
+    },
+    {
+      "id": "syn_easy_06",
+      "level": "easy",
+      "category": "clean",
+      "text": "Hi team, Tom here. Picked up from Grainger for Job #576: 4x 1 in PVC Pipe Schedule 40 10 ft (SKU: PVC-S40-1) at $6.12 each (line total $24.48) and 2x AGM Battery H6 (SKU: AGM-H6) at $199.99 each (line total $399.98). Total on receipt is $424.46.",
+      "expected": "APPROVED",
+      "stated_total": 424.46,
+      "lines": [
+        {
+          "sku": "PVC-S40-1",
+          "quantity": 4,
+          "unit_price": 6.12,
+          "line_total": 24.48
+        },
+        {
+          "sku": "AGM-H6",
+          "quantity": 2,
+          "unit_price": 199.99,
+          "line_total": 399.98
+        }
+      ],
+      "why": "all fields written, totals match"
+    },
+    {
+      "id": "syn_easy_07",
+      "level": "easy",
+      "category": "clean",
+      "text": "team, bought at AutoZone for Job #962: 10x ESP32-S3 Module (SKU: ESP32-S3-WROOM-1) at $3.90 each (line total $39.00) and 2x Eaton 20A Circuit Breaker (SKU: BR120) at $14.50 each (line total $29.00). Total $68.00. - Mike",
+      "expected": "APPROVED",
+      "stated_total": 68.0,
+      "lines": [
+        {
+          "sku": "ESP32-S3-WROOM-1",
+          "quantity": 10,
+          "unit_price": 3.9,
+          "line_total": 39.0
+        },
+        {
+          "sku": "BR120",
+          "quantity": 2,
+          "unit_price": 14.5,
+          "line_total": 29.0
+        }
+      ],
+      "why": "all fields written, totals match"
+    },
+    {
+      "id": "syn_easy_08",
+      "level": "easy",
+      "category": "clean",
+      "text": "Vendor: Grainger | Job #703. 8x Klein Wire Stripper (SKU: KL-11055) at $19.99 each (line total $159.92) and 6x Eaton 20A Circuit Breaker (SKU: BR120) at $14.50 each (line total $87.00). Receipt total $246.92.",
+      "expected": "APPROVED",
+      "stated_total": 246.92,
+      "lines": [
+        {
+          "sku": "KL-11055",
+          "quantity": 8,
+          "unit_price": 19.99,
+          "line_total": 159.92
+        },
+        {
+          "sku": "BR120",
+          "quantity": 6,
+          "unit_price": 14.5,
+          "line_total": 87.0
+        }
+      ],
+      "why": "all fields written, totals match"
+    },
+    {
+      "id": "syn_easy_09",
+      "level": "easy",
+      "category": "clean",
+      "text": "Vendor: Fastenal | Job #829. 8x ESP32-S3 Module (SKU: ESP32-S3-WROOM-1) at $3.90 each (line total $31.20) and 4x Leviton 20A GFCI Outlet (SKU: GFCI-20) at $22.50 each (line total $90.00). Receipt total $121.20.",
+      "expected": "APPROVED",
+      "stated_total": 121.2,
+      "lines": [
+        {
+          "sku": "ESP32-S3-WROOM-1",
+          "quantity": 8,
+          "unit_price": 3.9,
+          "line_total": 31.2
+        },
+        {
+          "sku": "GFCI-20",
+          "quantity": 4,
+          "unit_price": 22.5,
+          "line_total": 90.0
+        }
+      ],
+      "why": "all fields written, totals match"
+    },
+    {
+      "id": "syn_easy_10",
+      "level": "easy",
+      "category": "clean",
+      "text": "office, bought at Home Depot for Job #463: 4x 3M Super 33+ Electrical Tape (SKU: TAPE-33) at $6.97 each (line total $27.88) and 1x Square D Junction Box (SKU: JB-4SQ) at $8.25 each (line total $8.25). Total $36.13. - Mike",
+      "expected": "APPROVED",
+      "stated_total": 36.13,
+      "lines": [
+        {
+          "sku": "TAPE-33",
+          "quantity": 4,
+          "unit_price": 6.97,
+          "line_total": 27.88
+        },
+        {
+          "sku": "JB-4SQ",
+          "quantity": 1,
+          "unit_price": 8.25,
+          "line_total": 8.25
+        }
+      ],
+      "why": "all fields written, totals match"
+    },
+    {
+      "id": "syn_easy_11",
+      "level": "easy",
+      "category": "clean",
+      "text": "Hi Kim, Tom here. Picked up from AutoZone for Job #379: 8x 1 in PVC Pipe Schedule 40 10 ft (SKU: PVC-S40-1) at $6.12 each (line total $48.96). Total on receipt is $48.96.",
+      "expected": "APPROVED",
+      "stated_total": 48.96,
+      "lines": [
+        {
+          "sku": "PVC-S40-1",
+          "quantity": 8,
+          "unit_price": 6.12,
+          "line_total": 48.96
+        }
+      ],
+      "why": "all fields written, totals match"
+    },
+    {
+      "id": "syn_easy_12",
+      "level": "easy",
+      "category": "clean",
+      "text": "office, bought at Grainger for Job #970: 6x Eaton 20A Circuit Breaker (SKU: BR120) at $14.50 each (line total $87.00) and 8x Windshield Washer Fluid 1 gal (SKU: WW-1G) at $3.49 each (line total $27.92). Total $114.92. - Tom",
+      "expected": "APPROVED",
+      "stated_total": 114.92,
+      "lines": [
+        {
+          "sku": "BR120",
+          "quantity": 6,
+          "unit_price": 14.5,
+          "line_total": 87.0
+        },
+        {
+          "sku": "WW-1G",
+          "quantity": 8,
+          "unit_price": 3.49,
+          "line_total": 27.92
+        }
+      ],
+      "why": "all fields written, totals match"
+    },
+    {
+      "id": "syn_easy_13",
+      "level": "easy",
+      "category": "clean",
+      "text": "Vendor: DigiKey Electronics | Job #398. 12x Eaton 20A Circuit Breaker (SKU: BR120) at $14.50 each (line total $174.00) and 3x LED Bulb A19 9W (SKU: LED-A19-9W) at $2.75 each (line total $8.25). Receipt total $182.25.",
+      "expected": "APPROVED",
+      "stated_total": 182.25,
+      "lines": [
+        {
+          "sku": "BR120",
+          "quantity": 12,
+          "unit_price": 14.5,
+          "line_total": 174.0
+        },
+        {
+          "sku": "LED-A19-9W",
+          "quantity": 3,
+          "unit_price": 2.75,
+          "line_total": 8.25
+        }
+      ],
+      "why": "all fields written, totals match"
+    },
+    {
+      "id": "syn_easy_14",
+      "level": "easy",
+      "category": "clean",
+      "text": "team, bought at Grainger for Job #585: 5x Cat6 Patch Cable 50 ft (SKU: CB-6-50) at $12.40 each (line total $62.00). Total $62.00. - Dave",
+      "expected": "APPROVED",
+      "stated_total": 62.0,
+      "lines": [
+        {
+          "sku": "CB-6-50",
+          "quantity": 5,
+          "unit_price": 12.4,
+          "line_total": 62.0
+        }
+      ],
+      "why": "all fields written, totals match"
+    },
+    {
+      "id": "syn_easy_15",
+      "level": "easy",
+      "category": "clean",
+      "text": "Hi office, Tom here. Picked up from AutoZone for Job #569: 2x Cat6 Patch Cable 50 ft (SKU: CB-6-50) at $12.40 each (line total $24.80) and 3x Omron Relay 12V (SKU: G2R-1-E) at $15.00 each (line total $45.00). Total on receipt is $69.80.",
+      "expected": "APPROVED",
+      "stated_total": 69.8,
+      "lines": [
+        {
+          "sku": "CB-6-50",
+          "quantity": 2,
+          "unit_price": 12.4,
+          "line_total": 24.8
+        },
+        {
+          "sku": "G2R-1-E",
+          "quantity": 3,
+          "unit_price": 15.0,
+          "line_total": 45.0
+        }
+      ],
+      "why": "all fields written, totals match"
+    },
+    {
+      "id": "syn_easy_16",
+      "level": "easy",
+      "category": "clean",
+      "text": "team, bought at AutoZone for Job #843: 12x Eaton 20A Circuit Breaker (SKU: BR120) at $14.50 each (line total $174.00). Total $174.00. - Priya",
+      "expected": "APPROVED",
+      "stated_total": 174.0,
+      "lines": [
+        {
+          "sku": "BR120",
+          "quantity": 12,
+          "unit_price": 14.5,
+          "line_total": 174.0
+        }
+      ],
+      "why": "all fields written, totals match"
+    },
+    {
+      "id": "syn_easy_17",
+      "level": "easy",
+      "category": "clean",
+      "text": "office, bought at Mouser for Job #744: 10x Eaton 20A Circuit Breaker (SKU: BR120) at $14.50 each (line total $145.00) and 3x 1 in PVC Pipe Schedule 40 10 ft (SKU: PVC-S40-1) at $6.12 each (line total $18.36). Total $163.36. - Ana",
+      "expected": "APPROVED",
+      "stated_total": 163.36,
+      "lines": [
+        {
+          "sku": "BR120",
+          "quantity": 10,
+          "unit_price": 14.5,
+          "line_total": 145.0
+        },
+        {
+          "sku": "PVC-S40-1",
+          "quantity": 3,
+          "unit_price": 6.12,
+          "line_total": 18.36
+        }
+      ],
+      "why": "all fields written, totals match"
+    },
+    {
+      "id": "syn_easy_18",
+      "level": "easy",
+      "category": "clean",
+      "text": "Vendor: Fastenal | Job #535. 4x Eaton 20A Circuit Breaker (SKU: BR120) at $14.50 each (line total $58.00) and 20x AGM Battery H6 (SKU: AGM-H6) at $199.99 each (line total $3,999.80). Receipt total $4,057.80.",
+      "expected": "APPROVED",
+      "stated_total": 4057.8,
+      "lines": [
+        {
+          "sku": "BR120",
+          "quantity": 4,
+          "unit_price": 14.5,
+          "line_total": 58.0
+        },
+        {
+          "sku": "AGM-H6",
+          "quantity": 20,
+          "unit_price": 199.99,
+          "line_total": 3999.8
+        }
+      ],
+      "why": "all fields written, totals match"
+    },
+    {
+      "id": "syn_easy_19",
+      "level": "easy",
+      "category": "clean",
+      "text": "Vendor: DigiKey Electronics | Job #609. 12x Eaton 20A Circuit Breaker (SKU: BR120) at $14.50 each (line total $174.00) and 5x Leviton 20A GFCI Outlet (SKU: GFCI-20) at $22.50 each (line total $112.50). Receipt total $286.50.",
+      "expected": "APPROVED",
+      "stated_total": 286.5,
+      "lines": [
+        {
+          "sku": "BR120",
+          "quantity": 12,
+          "unit_price": 14.5,
+          "line_total": 174.0
+        },
+        {
+          "sku": "GFCI-20",
+          "quantity": 5,
+          "unit_price": 22.5,
+          "line_total": 112.5
+        }
+      ],
+      "why": "all fields written, totals match"
+    },
+    {
+      "id": "syn_easy_20",
+      "level": "easy",
+      "category": "clean",
+      "text": "team, bought at Mouser for Job #672: 8x Wago Lever Connector 3-port (SKU: WAGO-221-413) at $0.89 each (line total $7.12) and 2x 1/2 in EMT Conduit 10 ft (SKU: EMT-12-10) at $7.48 each (line total $14.96). Total $22.08. - Carlos",
+      "expected": "APPROVED",
+      "stated_total": 22.08,
+      "lines": [
+        {
+          "sku": "WAGO-221-413",
+          "quantity": 8,
+          "unit_price": 0.89,
+          "line_total": 7.12
+        },
+        {
+          "sku": "EMT-12-10",
+          "quantity": 2,
+          "unit_price": 7.48,
+          "line_total": 14.96
+        }
+      ],
+      "why": "all fields written, totals match"
+    },
+    {
+      "id": "syn_hard_typo_01",
+      "level": "hard",
+      "category": "typos",
+      "text": "hey team pikced up at DigiKey Electronics for job #439: 1x STM32F401 Microcontroller (SKU: STM32F401RET6) at $4.80 eahc (line totl $4.80) and 1x Klein Wire Stripper (SKU: KL-11055) at $19.99 eahc (line totl $19.99). totl on reciept $24.79. Jen",
+      "expected": "APPROVED",
+      "stated_total": 24.79,
+      "lines": [
+        {
+          "sku": "STM32F401RET6",
+          "quantity": 1,
+          "unit_price": 4.8,
+          "line_total": 4.8
+        },
+        {
+          "sku": "KL-11055",
+          "quantity": 1,
+          "unit_price": 19.99,
+          "line_total": 19.99
+        }
+      ],
+      "why": "misspelled words only; numbers and SKUs intact"
+    },
+    {
+      "id": "syn_hard_typo_02",
+      "level": "hard",
+      "category": "typos",
+      "text": "hey Sarah pikced up at Mouser for job #916: 2x Windshield Washer Fluid 1 gal (SKU: WW-1G) at $3.49 eahc (line totl $6.98) and 1x 1 in PVC Pipe Schedule 40 10 ft (SKU: PVC-S40-1) at $6.12 eahc (line totl $6.12). totl on reciept $13.10. Priya",
+      "expected": "APPROVED",
+      "stated_total": 13.1,
+      "lines": [
+        {
+          "sku": "WW-1G",
+          "quantity": 2,
+          "unit_price": 3.49,
+          "line_total": 6.98
+        },
+        {
+          "sku": "PVC-S40-1",
+          "quantity": 1,
+          "unit_price": 6.12,
+          "line_total": 6.12
+        }
+      ],
+      "why": "misspelled words only; numbers and SKUs intact"
+    },
+    {
+      "id": "syn_hard_typo_03",
+      "level": "hard",
+      "category": "typos",
+      "text": "hey Kim pikced up at Grainger for job #981: 2x Windshield Washer Fluid 1 gal (SKU: WW-1G) at $3.49 eahc (line totl $6.98) and 2x Square D 15A Circut Breakr (SKU: QO115) at $11.75 eahc (line totl $23.50). totl on reciept $30.48. Priya",
+      "expected": "APPROVED",
+      "stated_total": 30.48,
+      "lines": [
+        {
+          "sku": "WW-1G",
+          "quantity": 2,
+          "unit_price": 3.49,
+          "line_total": 6.98
+        },
+        {
+          "sku": "QO115",
+          "quantity": 2,
+          "unit_price": 11.75,
+          "line_total": 23.5
+        }
+      ],
+      "why": "misspelled words only; numbers and SKUs intact"
+    },
+    {
+      "id": "syn_hard_typo_04",
+      "level": "hard",
+      "category": "typos",
+      "text": "hey Sarah pikced up at DigiKey Electronics for job #521: 4x Windshield Washer Fluid 1 gal (SKU: WW-1G) at $3.49 eahc (line totl $13.96) and 4x Square D Junktion Box (SKU: JB-4SQ) at $8.25 eahc (line totl $33.00). totl on reciept $46.96. Priya",
+      "expected": "APPROVED",
+      "stated_total": 46.96,
+      "lines": [
+        {
+          "sku": "WW-1G",
+          "quantity": 4,
+          "unit_price": 3.49,
+          "line_total": 13.96
+        },
+        {
+          "sku": "JB-4SQ",
+          "quantity": 4,
+          "unit_price": 8.25,
+          "line_total": 33.0
+        }
+      ],
+      "why": "misspelled words only; numbers and SKUs intact"
+    },
+    {
+      "id": "syn_hard_typo_05",
+      "level": "hard",
+      "category": "typos",
+      "text": "hey Kim pikced up at Mouser for job #557: 4x Square D 15A Circut Breakr (SKU: QO115) at $11.75 eahc (line totl $47.00) and 20x Romex 12/2 NM-B Wire 250 ft Spool (SKU: NM12-2-250) at $95.00 eahc (line totl $1,900.00). totl on reciept $1,947.00. Carlos",
+      "expected": "APPROVED",
+      "stated_total": 1947.0,
+      "lines": [
+        {
+          "sku": "QO115",
+          "quantity": 4,
+          "unit_price": 11.75,
+          "line_total": 47.0
+        },
+        {
+          "sku": "NM12-2-250",
+          "quantity": 20,
+          "unit_price": 95.0,
+          "line_total": 1900.0
+        }
+      ],
+      "why": "misspelled words only; numbers and SKUs intact"
+    },
+    {
+      "id": "syn_hard_typo_06",
+      "level": "hard",
+      "category": "typos",
+      "text": "hey Sarah pikced up at Lowe's for job #904: 12x Square D 15A Circut Breakr (SKU: QO115) at $11.75 eahc (line totl $141.00) and 4x LED Bulb A19 9W (SKU: LED-A19-9W) at $2.75 eahc (line totl $11.00). totl on reciept $152.00. Mike",
+      "expected": "APPROVED",
+      "stated_total": 152.0,
+      "lines": [
+        {
+          "sku": "QO115",
+          "quantity": 12,
+          "unit_price": 11.75,
+          "line_total": 141.0
+        },
+        {
+          "sku": "LED-A19-9W",
+          "quantity": 4,
+          "unit_price": 2.75,
+          "line_total": 11.0
+        }
+      ],
+      "why": "misspelled words only; numbers and SKUs intact"
+    },
+    {
+      "id": "syn_hard_typo_07",
+      "level": "hard",
+      "category": "typos",
+      "text": "hey office pikced up at Mouser for job #882: 1x Wago Lever Conector 3-port (SKU: WAGO-221-413) at $0.89 eahc (line totl $0.89) and 5x Windshield Washer Fluid 1 gal (SKU: WW-1G) at $3.49 eahc (line totl $17.45). totl on reciept $18.34. Ana",
+      "expected": "APPROVED",
+      "stated_total": 18.34,
+      "lines": [
+        {
+          "sku": "WAGO-221-413",
+          "quantity": 1,
+          "unit_price": 0.89,
+          "line_total": 0.89
+        },
+        {
+          "sku": "WW-1G",
+          "quantity": 5,
+          "unit_price": 3.49,
+          "line_total": 17.45
+        }
+      ],
+      "why": "misspelled words only; numbers and SKUs intact"
+    },
+    {
+      "id": "syn_hard_two_01",
+      "level": "hard",
+      "category": "two_items_one_sentence",
+      "text": "Job #533 - Lowe's: 12 of JB-4SQ Square D Junction Box at $8.25 plus 2 of BR120 Eaton 20A Circuit Breaker at $14.50 a piece, total $128.00. Jen",
+      "expected": "APPROVED",
+      "stated_total": 128.0,
+      "lines": [
+        {
+          "sku": "JB-4SQ",
+          "quantity": 12,
+          "unit_price": 8.25,
+          "line_total": 99.0
+        },
+        {
+          "sku": "BR120",
+          "quantity": 2,
+          "unit_price": 14.5,
+          "line_total": 29.0
+        }
+      ],
+      "why": "two items share one sentence; all values written"
+    },
+    {
+      "id": "syn_hard_two_02",
+      "level": "hard",
+      "category": "two_items_one_sentence",
+      "text": "Job #301 - Lowe's: 3 of PVC-S40-1 1 in PVC Pipe Schedule 40 10 ft at $6.12 plus 1 of EMT-12-10 1/2 in EMT Conduit 10 ft at $7.48 a piece, total $25.84. Tom",
+      "expected": "APPROVED",
+      "stated_total": 25.84,
+      "lines": [
+        {
+          "sku": "PVC-S40-1",
+          "quantity": 3,
+          "unit_price": 6.12,
+          "line_total": 18.36
+        },
+        {
+          "sku": "EMT-12-10",
+          "quantity": 1,
+          "unit_price": 7.48,
+          "line_total": 7.48
+        }
+      ],
+      "why": "two items share one sentence; all values written"
+    },
+    {
+      "id": "syn_hard_two_03",
+      "level": "hard",
+      "category": "two_items_one_sentence",
+      "text": "Kim, Priya at Mouser for Job #349, got 3 LED Bulb A19 9W (LED-A19-9W) and 2 1/2 in EMT Conduit 10 ft (EMT-12-10) at $2.75 and $7.48 each, respectively, $23.21 all in.",
+      "expected": "APPROVED",
+      "stated_total": 23.21,
+      "lines": [
+        {
+          "sku": "LED-A19-9W",
+          "quantity": 3,
+          "unit_price": 2.75,
+          "line_total": 8.25
+        },
+        {
+          "sku": "EMT-12-10",
+          "quantity": 2,
+          "unit_price": 7.48,
+          "line_total": 14.96
+        }
+      ],
+      "why": "two items share one sentence; all values written"
+    },
+    {
+      "id": "syn_hard_two_04",
+      "level": "hard",
+      "category": "two_items_one_sentence",
+      "text": "Job #609 - Lowe's: 2 of G2R-1-E Omron Relay 12V at $15.00 plus 6 of NM12-2-250 Romex 12/2 NM-B Wire 250 ft Spool at $95.00 a piece, total $600.00. Carlos",
+      "expected": "APPROVED",
+      "stated_total": 600.0,
+      "lines": [
+        {
+          "sku": "G2R-1-E",
+          "quantity": 2,
+          "unit_price": 15.0,
+          "line_total": 30.0
+        },
+        {
+          "sku": "NM12-2-250",
+          "quantity": 6,
+          "unit_price": 95.0,
+          "line_total": 570.0
+        }
+      ],
+      "why": "two items share one sentence; all values written"
+    },
+    {
+      "id": "syn_hard_two_05",
+      "level": "hard",
+      "category": "two_items_one_sentence",
+      "text": "Job #727 - Lowe's: 4 of TAPE-33 3M Super 33+ Electrical Tape at $6.97 plus 2 of JB-4SQ Square D Junction Box at $8.25 a piece, total $44.38. Dave",
+      "expected": "APPROVED",
+      "stated_total": 44.38,
+      "lines": [
+        {
+          "sku": "TAPE-33",
+          "quantity": 4,
+          "unit_price": 6.97,
+          "line_total": 27.88
+        },
+        {
+          "sku": "JB-4SQ",
+          "quantity": 2,
+          "unit_price": 8.25,
+          "line_total": 16.5
+        }
+      ],
+      "why": "two items share one sentence; all values written"
+    },
+    {
+      "id": "syn_hard_two_06",
+      "level": "hard",
+      "category": "two_items_one_sentence",
+      "text": "Job #901 - Mouser: 4 of EMT-12-10 1/2 in EMT Conduit 10 ft at $7.48 plus 20 of JB-4SQ Square D Junction Box at $8.25 a piece, total $194.92. Luis",
+      "expected": "APPROVED",
+      "stated_total": 194.92,
+      "lines": [
+        {
+          "sku": "EMT-12-10",
+          "quantity": 4,
+          "unit_price": 7.48,
+          "line_total": 29.92
+        },
+        {
+          "sku": "JB-4SQ",
+          "quantity": 20,
+          "unit_price": 8.25,
+          "line_total": 165.0
+        }
+      ],
+      "why": "two items share one sentence; all values written"
+    },
+    {
+      "id": "syn_hard_two_07",
+      "level": "hard",
+      "category": "two_items_one_sentence",
+      "text": "Job #420 - Home Depot: 6 of ESP32-S3-WROOM-1 ESP32-S3 Module at $3.90 plus 1 of TAPE-33 3M Super 33+ Electrical Tape at $6.97 a piece, total $30.37. Tom",
+      "expected": "APPROVED",
+      "stated_total": 30.37,
+      "lines": [
+        {
+          "sku": "ESP32-S3-WROOM-1",
+          "quantity": 6,
+          "unit_price": 3.9,
+          "line_total": 23.4
+        },
+        {
+          "sku": "TAPE-33",
+          "quantity": 1,
+          "unit_price": 6.97,
+          "line_total": 6.97
+        }
+      ],
+      "why": "two items share one sentence; all values written"
+    },
+    {
+      "id": "syn_hard_noqty_01",
+      "level": "hard",
+      "category": "missing_quantity",
+      "text": "Sarah, Dave here, Grainger for Job #332: 2x STM32F401 Microcontroller (SKU: STM32F401RET6) at $4.80 each (line total $9.60), plus a few Omron Relay 12V (G2R-1-E) at $15.00 each, didn't count them.",
+      "expected": "QUARANTINE",
+      "stated_total": null,
+      "lines": null,
+      "why": "no number for G2R-1-E"
+    },
+    {
+      "id": "syn_hard_noqty_02",
+      "level": "hard",
+      "category": "missing_quantity",
+      "text": "Kim, Ana here, Lowe's for Job #386: 1x AGM Battery H6 (SKU: AGM-H6) at $199.99 each (line total $199.99), plus a handful of Omron Relay 12V (G2R-1-E) at $15.00 each, didn't count them.",
+      "expected": "QUARANTINE",
+      "stated_total": null,
+      "lines": null,
+      "why": "no number for G2R-1-E"
+    },
+    {
+      "id": "syn_hard_noqty_03",
+      "level": "hard",
+      "category": "missing_quantity",
+      "text": "team, Jen here, AutoZone for Job #615: 6x ESP32-S3 Module (SKU: ESP32-S3-WROOM-1) at $3.90 each (line total $23.40), plus some Romex 12/2 NM-B Wire 250 ft Spool (NM12-2-250) at $95.00 each, didn't count them.",
+      "expected": "QUARANTINE",
+      "stated_total": null,
+      "lines": null,
+      "why": "no number for NM12-2-250"
+    },
+    {
+      "id": "syn_hard_noqty_04",
+      "level": "hard",
+      "category": "missing_quantity",
+      "text": "office, Luis here, Home Depot for Job #789: 20x 1 in PVC Pipe Schedule 40 10 ft (SKU: PVC-S40-1) at $6.12 each (line total $122.40), plus some Square D 15A Circuit Breaker (QO115) at $11.75 each, didn't count them.",
+      "expected": "QUARANTINE",
+      "stated_total": null,
+      "lines": null,
+      "why": "no number for QO115"
+    },
+    {
+      "id": "syn_hard_noqty_05",
+      "level": "hard",
+      "category": "missing_quantity",
+      "text": "Kim, Ana here, Grainger for Job #951: 20x Klein Wire Stripper (SKU: KL-11055) at $19.99 each (line total $399.80), plus a few Square D Junction Box (JB-4SQ) at $8.25 each, didn't count them.",
+      "expected": "QUARANTINE",
+      "stated_total": null,
+      "lines": null,
+      "why": "no number for JB-4SQ"
+    },
+    {
+      "id": "syn_hard_noqty_06",
+      "level": "hard",
+      "category": "missing_quantity",
+      "text": "team, Carlos here, Grainger for Job #504: 6x ESP32-S3 Module (SKU: ESP32-S3-WROOM-1) at $3.90 each (line total $23.40), plus however many they had of AGM Battery H6 (AGM-H6) at $199.99 each, didn't count them.",
+      "expected": "QUARANTINE",
+      "stated_total": null,
+      "lines": null,
+      "why": "no number for AGM-H6"
+    },
+    {
+      "id": "syn_hard_noqty_07",
+      "level": "hard",
+      "category": "missing_quantity",
+      "text": "team, Luis here, Mouser for Job #409: 5x Romex 12/2 NM-B Wire 250 ft Spool (SKU: NM12-2-250) at $95.00 each (line total $475.00), plus a handful of Square D 15A Circuit Breaker (QO115) at $11.75 each, didn't count them.",
+      "expected": "QUARANTINE",
+      "stated_total": null,
+      "lines": null,
+      "why": "no number for QO115"
+    },
+    {
+      "id": "syn_hard_unit_01",
+      "level": "hard",
+      "category": "unclear_unit",
+      "text": "Priya for team: at Grainger, Job #415. 4x Eaton 20A Circuit Breaker (SKU: BR120) at $14.50 each (line total $58.00). Also 2 packs of Leviton 20A GFCI Outlet (GFCI-20) at $506.25 a pack, not sure how many are in a pack.",
+      "expected": "QUARANTINE",
+      "stated_total": null,
+      "lines": null,
+      "why": "GFCI-20 priced per pack; catalog sells per piece at 22.50"
+    },
+    {
+      "id": "syn_hard_unit_02",
+      "level": "hard",
+      "category": "unclear_unit",
+      "text": "Dave for Sarah: at Grainger, Job #644. 5x Wago Lever Connector 3-port (SKU: WAGO-221-413) at $0.89 each (line total $4.45). Also 2 packs of 1 in PVC Pipe Schedule 40 10 ft (PVC-S40-1) at $137.70 a pack, not sure how many are in a pack.",
+      "expected": "QUARANTINE",
+      "stated_total": null,
+      "lines": null,
+      "why": "PVC-S40-1 priced per pack; catalog sells per piece at 6.12"
+    },
+    {
+      "id": "syn_hard_unit_03",
+      "level": "hard",
+      "category": "unclear_unit",
+      "text": "Tom for office: at Fastenal, Job #769. 6x 3M Super 33+ Electrical Tape (SKU: TAPE-33) at $6.97 each (line total $41.82). Also 4 boxes of Square D 15A Circuit Breaker (QO115) at $105.75 a box, not sure how many are in a box.",
+      "expected": "QUARANTINE",
+      "stated_total": null,
+      "lines": null,
+      "why": "QO115 priced per box; catalog sells per piece at 11.75"
+    },
+    {
+      "id": "syn_hard_unit_04",
+      "level": "hard",
+      "category": "unclear_unit",
+      "text": "Ana for Sarah: at DigiKey Electronics, Job #536. 5x Cat6 Patch Cable 50 ft (SKU: CB-6-50) at $12.40 each (line total $62.00). Also 4 boxes of Klein Wire Stripper (KL-11055) at $107.95 a box, not sure how many are in a box.",
+      "expected": "QUARANTINE",
+      "stated_total": null,
+      "lines": null,
+      "why": "KL-11055 priced per box; catalog sells per piece at 19.99"
+    },
+    {
+      "id": "syn_hard_unit_05",
+      "level": "hard",
+      "category": "unclear_unit",
+      "text": "Carlos for office: at Grainger, Job #377. 20x LED Bulb A19 9W (SKU: LED-A19-9W) at $2.75 each (line total $55.00). Also 3 cases of STM32F401 Microcontroller (STM32F401RET6) at $43.20 a case, not sure how many are in a case.",
+      "expected": "QUARANTINE",
+      "stated_total": null,
+      "lines": null,
+      "why": "STM32F401RET6 priced per case; catalog sells per piece at 4.80"
+    },
+    {
+      "id": "syn_hard_unit_06",
+      "level": "hard",
+      "category": "unclear_unit",
+      "text": "Priya for office: at Lowe's, Job #789. 6x Klein Wire Stripper (SKU: KL-11055) at $19.99 each (line total $119.94). Also 2 boxes of Wago Lever Connector 3-port (WAGO-221-413) at $8.01 a box, not sure how many are in a box.",
+      "expected": "QUARANTINE",
+      "stated_total": null,
+      "lines": null,
+      "why": "WAGO-221-413 priced per box; catalog sells per piece at 0.89"
+    },
+    {
+      "id": "syn_hard_unit_07",
+      "level": "hard",
+      "category": "unclear_unit",
+      "text": "Luis for office: at Grainger, Job #965. 20x Romex 12/2 NM-B Wire 250 ft Spool (SKU: NM12-2-250) at $95.00 each (line total $1,900.00). Also 2 boxes of ESP32-S3 Module (ESP32-S3-WROOM-1) at $21.06 a box, not sure how many are in a box.",
+      "expected": "QUARANTINE",
+      "stated_total": null,
+      "lines": null,
+      "why": "ESP32-S3-WROOM-1 priced per box; catalog sells per piece at 3.90"
+    },
+    {
+      "id": "syn_hard_price_01",
+      "level": "hard",
+      "category": "price_not_in_catalog",
+      "text": "Hi office, Lowe's for Job #450: 12x Square D 15A Circuit Breaker (SKU: QO115) at $11.75 each (line total $141.00) and 1x Square D Junction Box (SKU: JB-4SQ) at $10.31 each (line total $10.31). Total $151.31. Carlos",
+      "expected": "QUARANTINE",
+      "stated_total": 151.31,
+      "lines": null,
+      "why": "JB-4SQ at 10.31, catalog says 8.25"
+    },
+    {
+      "id": "syn_hard_price_02",
+      "level": "hard",
+      "category": "price_not_in_catalog",
+      "text": "Hi Sarah, AutoZone for Job #565: 10x 3M Super 33+ Electrical Tape (SKU: TAPE-33) at $6.97 each (line total $69.70) and 8x Leviton 20A GFCI Outlet (SKU: GFCI-20) at $18.00 each (line total $144.00). Total $213.70. Carlos",
+      "expected": "QUARANTINE",
+      "stated_total": 213.7,
+      "lines": null,
+      "why": "GFCI-20 at 18.00, catalog says 22.50"
+    },
+    {
+      "id": "syn_hard_price_03",
+      "level": "hard",
+      "category": "price_not_in_catalog",
+      "text": "Hi office, DigiKey Electronics for Job #403: 2x Square D 15A Circuit Breaker (SKU: QO115) at $11.75 each (line total $23.50) and 12x Square D Junction Box (SKU: JB-4SQ) at $9.49 each (line total $113.88). Total $137.38. Tom",
+      "expected": "QUARANTINE",
+      "stated_total": 137.38,
+      "lines": null,
+      "why": "JB-4SQ at 9.49, catalog says 8.25"
+    },
+    {
+      "id": "syn_hard_price_04",
+      "level": "hard",
+      "category": "price_not_in_catalog",
+      "text": "Hi office, Lowe's for Job #405: 6x 3M Super 33+ Electrical Tape (SKU: TAPE-33) at $6.97 each (line total $41.82) and 2x 1/2 in EMT Conduit 10 ft (SKU: EMT-12-10) at $5.98 each (line total $11.96). Total $53.78. Dave",
+      "expected": "QUARANTINE",
+      "stated_total": 53.78,
+      "lines": null,
+      "why": "EMT-12-10 at 5.98, catalog says 7.48"
+    },
+    {
+      "id": "syn_hard_price_05",
+      "level": "hard",
+      "category": "price_not_in_catalog",
+      "text": "Hi Kim, Grainger for Job #832: 6x Eaton 20A Circuit Breaker (SKU: BR120) at $14.50 each (line total $87.00) and 2x Windshield Washer Fluid 1 gal (SKU: WW-1G) at $4.89 each (line total $9.78). Total $96.78. Priya",
+      "expected": "QUARANTINE",
+      "stated_total": 96.78,
+      "lines": null,
+      "why": "WW-1G at 4.89, catalog says 3.49"
+    },
+    {
+      "id": "syn_hard_price_06",
+      "level": "hard",
+      "category": "price_not_in_catalog",
+      "text": "Hi team, AutoZone for Job #568: 1x ESP32-S3 Module (SKU: ESP32-S3-WROOM-1) at $3.90 each (line total $3.90) and 1x 1/2 in EMT Conduit 10 ft (SKU: EMT-12-10) at $10.47 each (line total $10.47). Total $14.37. Dave",
+      "expected": "QUARANTINE",
+      "stated_total": 14.37,
+      "lines": null,
+      "why": "EMT-12-10 at 10.47, catalog says 7.48"
+    },
+    {
+      "id": "syn_hard_sku_01",
+      "level": "hard",
+      "category": "unknown_sku",
+      "text": "office, Tom: Home Depot, Job #591. 1x AGM Battery H6 (SKU: AGM-H6) at $199.99 each (line total $199.99), and 6x GFCI-15 at $9.99 each (line total $59.94). Total $259.93.",
+      "expected": "QUARANTINE",
+      "stated_total": 259.93,
+      "lines": null,
+      "why": "GFCI-15 is not in the catalog"
+    },
+    {
+      "id": "syn_hard_sku_02",
+      "level": "hard",
+      "category": "unknown_sku",
+      "text": "Sarah, Ana: AutoZone, Job #695. 6x Romex 12/2 NM-B Wire 250 ft Spool (SKU: NM12-2-250) at $95.00 each (line total $570.00), and 6x QO1150 at $27.00 each (line total $162.00). Total $732.00.",
+      "expected": "QUARANTINE",
+      "stated_total": 732.0,
+      "lines": null,
+      "why": "QO1150 is not in the catalog"
+    },
+    {
+      "id": "syn_hard_sku_03",
+      "level": "hard",
+      "category": "unknown_sku",
+      "text": "Kim, Carlos: Home Depot, Job #808. 20x Eaton 20A Circuit Breaker (SKU: BR120) at $14.50 each (line total $290.00), and 10x TAPE-88 at $48.00 each (line total $480.00). Total $770.00.",
+      "expected": "QUARANTINE",
+      "stated_total": 770.0,
+      "lines": null,
+      "why": "TAPE-88 is not in the catalog"
+    },
+    {
+      "id": "syn_hard_sku_04",
+      "level": "hard",
+      "category": "unknown_sku",
+      "text": "office, Mike: AutoZone, Job #814. 1x LED Bulb A19 9W (SKU: LED-A19-9W) at $2.75 each (line total $2.75), and 12x BR125 at $13.50 each (line total $162.00). Total $164.75.",
+      "expected": "QUARANTINE",
+      "stated_total": 164.75,
+      "lines": null,
+      "why": "BR125 is not in the catalog"
+    },
+    {
+      "id": "syn_hard_sku_05",
+      "level": "hard",
+      "category": "unknown_sku",
+      "text": "office, Mike: Mouser, Job #933. 6x ESP32-S3 Module (SKU: ESP32-S3-WROOM-1) at $3.90 each (line total $23.40), and 2x SDR-120-12 at $48.00 each (line total $96.00). Total $119.40.",
+      "expected": "QUARANTINE",
+      "stated_total": 119.4,
+      "lines": null,
+      "why": "SDR-120-12 is not in the catalog"
+    },
+    {
+      "id": "syn_hard_sku_06",
+      "level": "hard",
+      "category": "unknown_sku",
+      "text": "team, Jen: Grainger, Job #575. 2x LED Bulb A19 9W (SKU: LED-A19-9W) at $2.75 each (line total $5.50), and 20x LED-A21-9W at $48.00 each (line total $960.00). Total $965.50.",
+      "expected": "QUARANTINE",
+      "stated_total": 965.5,
+      "lines": null,
+      "why": "LED-A21-9W is not in the catalog"
+    }
+  ]
+}

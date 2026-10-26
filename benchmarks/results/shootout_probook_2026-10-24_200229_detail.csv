@@ -1,0 +1,72 @@
+﻿doc_set,episode,document,expected,actual,correct,wrongly_approved,seconds,eval_tokens,eval_ms,model_calls,note,model,run
+original,EP01,msg_01_clean_order,APPROVED,APPROVED,1,0,33.7,161,25235.0,1,,qwen2.5:3b,1
+original,EP01,msg_02_missing_unit_price,QUARANTINE,QUARANTINE,1,0,28.8,145,22491.9,1,Row 1 (3 spools of 12/2 Romex NM-B wire): Both unit_price and line_total are null.; Row 2 (Klein wire stripper): Missing quantity.; Row 2 (Klein wire stripper): Both unit_price and line_total are null,qwen2.5:3b,1
+original,EP01,msg_03_missing_quantity,QUARANTINE,QUARANTINE,1,0,35.24,174,27940.3,1,Row 2 (10k Ohm 0805 SMD resistors): Missing quantity.,qwen2.5:3b,1
+original,EP01,msg_04_math_mismatch_trap,QUARANTINE,QUARANTINE,1,0,35.72,171,27021.0,1,"Invoice total mismatch: sum of lines is 255.00, but stated_total is 290.00 (difference may be tax/shipping or OCR error).",qwen2.5:3b,1
+original,EP01,msg_05_chaotic_voice_note,QUARANTINE,QUARANTINE,1,0,30.14,143,22665.8,1,Row 2 (Windshield Wiper Fluid): Both unit_price and line_total are null.,qwen2.5:3b,1
+original,EP02,mouser_bordered_invoice.pdf,APPROVED,APPROVED,1,0,61.3,258,42947.7,1,,qwen2.5:3b,1
+original,EP02,digikey_borderless_invoice.pdf,QUARANTINE,QUARANTINE,1,0,59.98,250,41605.8,1,"Invoice total mismatch: sum of lines is 295.00, but stated_total is 310.00 (difference may be tax/shipping or OCR error).",qwen2.5:3b,1
+original,EP03,tilted_fastenal_receipt.png,APPROVED,APPROVED,1,0,51.09,211,34080.0,1,,qwen2.5:3b,1
+original,EP05,register_update_message.txt,QUARANTINE,QUARANTINE,1,0,44.62,160,22507.0,4,,qwen2.5:3b,1
+original,EP05,fail_probe.txt,APPROVED,APPROVED,1,0,35.48,167,23423.1,4,,qwen2.5:3b,1
+original,EP05,shelf_tags_photo.jpg,APPROVED,APPROVED,1,0,37.52,136,19717.7,3,,qwen2.5:3b,1
+synthetic,SYN,syn_easy_01,APPROVED,APPROVED,0,1,21.95,100,15542.7,1,"values differ from source: [('WW-1G', 5.0, None, 17.45)] total=17.45",qwen2.5:3b,1
+synthetic,SYN,syn_easy_02,APPROVED,APPROVED,1,0,34.74,174,26346.7,1,,qwen2.5:3b,1
+synthetic,SYN,syn_easy_03,APPROVED,APPROVED,1,0,22.78,110,16455.6,1,,qwen2.5:3b,1
+synthetic,SYN,syn_easy_04,APPROVED,APPROVED,1,0,35.59,181,27350.4,1,,qwen2.5:3b,1
+synthetic,SYN,syn_easy_05,APPROVED,APPROVED,1,0,35.96,173,26445.8,1,,qwen2.5:3b,1
+synthetic,SYN,syn_easy_06,APPROVED,APPROVED,1,0,37.44,184,28160.6,1,,qwen2.5:3b,1
+synthetic,SYN,syn_easy_07,APPROVED,APPROVED,1,0,33.38,165,25045.7,1,,qwen2.5:3b,1
+synthetic,SYN,syn_easy_08,APPROVED,APPROVED,1,0,35.02,174,26618.8,1,,qwen2.5:3b,1
+synthetic,SYN,syn_easy_09,APPROVED,APPROVED,1,0,34.43,171,25992.4,1,,qwen2.5:3b,1
+synthetic,SYN,syn_easy_10,APPROVED,APPROVED,1,0,33.28,165,24936.8,1,,qwen2.5:3b,1
+synthetic,SYN,syn_easy_11,APPROVED,APPROVED,1,0,23.86,118,17707.4,1,,qwen2.5:3b,1
+synthetic,SYN,syn_easy_12,APPROVED,APPROVED,1,0,32.94,164,24701.9,1,,qwen2.5:3b,1
+synthetic,SYN,syn_easy_13,APPROVED,APPROVED,1,0,35.02,176,26531.8,1,,qwen2.5:3b,1
+synthetic,SYN,syn_easy_14,APPROVED,APPROVED,1,0,22.43,109,16408.2,1,,qwen2.5:3b,1
+synthetic,SYN,syn_easy_15,APPROVED,APPROVED,1,0,34.17,166,25004.4,1,,qwen2.5:3b,1
+synthetic,SYN,syn_easy_16,APPROVED,APPROVED,1,0,22.72,110,16505.7,1,,qwen2.5:3b,1
+synthetic,SYN,syn_easy_17,APPROVED,APPROVED,1,0,35.53,178,27108.7,1,,qwen2.5:3b,1
+synthetic,SYN,syn_easy_18,APPROVED,APPROVED,1,0,33.64,168,25420.0,1,,qwen2.5:3b,1
+synthetic,SYN,syn_easy_19,APPROVED,APPROVED,1,0,34.83,175,26391.7,1,,qwen2.5:3b,1
+synthetic,SYN,syn_easy_20,APPROVED,APPROVED,1,0,38.04,182,28798.2,1,,qwen2.5:3b,1
+synthetic,SYN,syn_hard_typo_01,APPROVED,APPROVED,1,0,39.58,176,29658.5,1,,qwen2.5:3b,1
+synthetic,SYN,syn_hard_typo_02,APPROVED,APPROVED,1,0,37.7,165,27179.4,1,,qwen2.5:3b,1
+synthetic,SYN,syn_hard_typo_03,APPROVED,APPROVED,1,0,34.85,167,25394.8,1,,qwen2.5:3b,1
+synthetic,SYN,syn_hard_typo_04,APPROVED,APPROVED,1,0,33.17,162,24872.9,1,,qwen2.5:3b,1
+synthetic,SYN,syn_hard_typo_05,APPROVED,APPROVED,1,0,37.37,172,26300.3,1,,qwen2.5:3b,1
+synthetic,SYN,syn_hard_typo_06,APPROVED,APPROVED,1,0,36.48,177,27016.2,1,,qwen2.5:3b,1
+synthetic,SYN,syn_hard_typo_07,APPROVED,APPROVED,1,0,35.52,172,26139.5,1,,qwen2.5:3b,1
+synthetic,SYN,syn_hard_two_01,APPROVED,QUARANTINE,0,0,32.47,174,26345.6,1,Row 1: no SKU,qwen2.5:3b,1
+synthetic,SYN,syn_hard_two_02,APPROVED,QUARANTINE,0,0,42.04,228,34836.0,1,Row 1: SKU PVC-S40-1 1 IN PVC PIPE SCHEDULE 40 10 FT not in catalog; Row 2: SKU EMT-12-10 1/2 IN EMT CONDUIT 10 FT not in catalog,qwen2.5:3b,1
+synthetic,SYN,syn_hard_two_03,APPROVED,QUARANTINE,0,0,33.79,174,26326.2,1,Row 2: no SKU,qwen2.5:3b,1
+synthetic,SYN,syn_hard_two_04,APPROVED,APPROVED,1,0,37.74,198,30297.8,1,,qwen2.5:3b,1
+synthetic,SYN,syn_hard_two_05,APPROVED,QUARANTINE,0,0,31.58,170,25476.4,1,Row 1: no SKU; Row 2: no SKU,qwen2.5:3b,1
+synthetic,SYN,syn_hard_two_06,APPROVED,QUARANTINE,0,0,35.97,196,29746.8,1,Row 1: SKU EMT-12-10 1/2 IN EMT CONDUIT not in catalog; Row 2: SKU JB-4SQ SQUARE D JUNCTION BOX not in catalog,qwen2.5:3b,1
+synthetic,SYN,syn_hard_two_07,APPROVED,APPROVED,1,0,34.55,187,28266.8,1,,qwen2.5:3b,1
+synthetic,SYN,syn_hard_noqty_01,QUARANTINE,QUARANTINE,1,0,31.95,164,24745.4,1,Row 2 (Omron Relay 12V): Missing quantity.; Row 2 (Omron Relay 12V): Both unit_price and line_total are null.,qwen2.5:3b,1
+synthetic,SYN,syn_hard_noqty_02,QUARANTINE,QUARANTINE,1,0,30.77,156,23570.3,1,Row 2 (Omron Relay 12V): Missing quantity.; Row 2 (Omron Relay 12V): Both unit_price and line_total are null.; Row 2: no SKU,qwen2.5:3b,1
+synthetic,SYN,syn_hard_noqty_03,QUARANTINE,QUARANTINE,1,0,33.55,161,24805.4,1,Row 2 (Romex 12/2 NM-B Wire): Missing quantity.; Row 2: no SKU,qwen2.5:3b,1
+synthetic,SYN,syn_hard_noqty_04,QUARANTINE,QUARANTINE,1,0,32.2,165,24977.3,1,Row 2 (Square D 15A Circuit Breaker): Missing quantity.; Row 2 (Square D 15A Circuit Breaker): Both unit_price and line_total are null.,qwen2.5:3b,1
+synthetic,SYN,syn_hard_noqty_05,QUARANTINE,QUARANTINE,1,0,31.24,161,24137.3,1,Row 2 (Square D Junction Box): Missing quantity.; Row 2 (Square D Junction Box): Both unit_price and line_total are null.,qwen2.5:3b,1
+synthetic,SYN,syn_hard_noqty_06,QUARANTINE,QUARANTINE,1,0,31.49,160,24188.2,1,Row 2 (AGM Battery H6): Missing quantity.; Row 2 (AGM Battery H6): Both unit_price and line_total are null.,qwen2.5:3b,1
+synthetic,SYN,syn_hard_noqty_07,QUARANTINE,QUARANTINE,1,0,33.55,167,25144.0,1,Row 2 (Square D 15A Circuit Breaker): Missing quantity.; Row 2 (Square D 15A Circuit Breaker): Both unit_price and line_total are null.; Row 2: no SKU,qwen2.5:3b,1
+synthetic,SYN,syn_hard_unit_01,QUARANTINE,QUARANTINE,1,0,32.92,163,24502.5,1,Row 2 (Leviton 20A GFCI Outlet): Missing quantity.; Row 2: no SKU,qwen2.5:3b,1
+synthetic,SYN,syn_hard_unit_02,QUARANTINE,QUARANTINE,1,0,33.25,166,24996.7,1,Row 2 (PVC Pipe Schedule 40 10 ft): Missing quantity.; Row 2: no SKU,qwen2.5:3b,1
+synthetic,SYN,syn_hard_unit_03,QUARANTINE,QUARANTINE,1,0,32.94,163,24752.2,1,Row 2 (Square D 15A Circuit Breaker): Missing quantity.; Row 2 (Square D 15A Circuit Breaker): Both unit_price and line_total are null.,qwen2.5:3b,1
+synthetic,SYN,syn_hard_unit_04,QUARANTINE,QUARANTINE,1,0,31.5,155,23312.8,1,Row 2 (Klein Wire Stripper): Missing quantity.; Row 2: no SKU,qwen2.5:3b,1
+synthetic,SYN,syn_hard_unit_05,QUARANTINE,QUARANTINE,1,0,35.25,177,26834.4,1,Row 2 (STM32F401 Microcontroller (STM32F401RET6)): Missing quantity.; Row 2 (STM32F401 Microcontroller (STM32F401RET6)): Both unit_price and line_total are null.,qwen2.5:3b,1
+synthetic,SYN,syn_hard_unit_06,QUARANTINE,QUARANTINE,1,0,33.92,169,25571.8,1,Row 2 (Wago Lever Connector 3-port): Missing quantity.; Row 2 (Wago Lever Connector 3-port): Both unit_price and line_total are null.,qwen2.5:3b,1
+synthetic,SYN,syn_hard_unit_07,QUARANTINE,QUARANTINE,1,0,37.47,184,27895.8,1,Row 2 (ESP32-S3 Module): Missing quantity.; Row 2 (ESP32-S3 Module): Both unit_price and line_total are null.,qwen2.5:3b,1
+synthetic,SYN,syn_hard_price_01,QUARANTINE,QUARANTINE,1,0,34.8,174,26421.5,1,Row 2: JB-4SQ price 10.31 != catalog 8.25,qwen2.5:3b,1
+synthetic,SYN,syn_hard_price_02,QUARANTINE,QUARANTINE,1,0,36.51,186,28141.2,1,Row 2: GFCI-20 price 18.0 != catalog 22.5,qwen2.5:3b,1
+synthetic,SYN,syn_hard_price_03,QUARANTINE,QUARANTINE,1,0,34.43,173,26192.6,1,Row 2: JB-4SQ price 9.49 != catalog 8.25,qwen2.5:3b,1
+synthetic,SYN,syn_hard_price_04,QUARANTINE,QUARANTINE,1,0,36.12,181,27818.0,1,Row 2: EMT-12-10 price 5.98 != catalog 7.48,qwen2.5:3b,1
+synthetic,SYN,syn_hard_price_05,QUARANTINE,QUARANTINE,1,0,33.21,164,24741.1,1,Row 2: WW-1G price 4.89 != catalog 3.49,qwen2.5:3b,1
+synthetic,SYN,syn_hard_price_06,QUARANTINE,QUARANTINE,1,0,35.55,179,27128.1,1,Row 2: EMT-12-10 price 10.47 != catalog 7.48,qwen2.5:3b,1
+synthetic,SYN,syn_hard_sku_01,QUARANTINE,QUARANTINE,1,0,32.04,165,24706.4,1,Row 2: no SKU,qwen2.5:3b,1
+synthetic,SYN,syn_hard_sku_02,QUARANTINE,QUARANTINE,1,0,36.27,183,27844.5,1,Row 2: no SKU,qwen2.5:3b,1
+synthetic,SYN,syn_hard_sku_03,QUARANTINE,QUARANTINE,1,0,32.28,165,24951.8,1,Row 2: no SKU,qwen2.5:3b,1
+synthetic,SYN,syn_hard_sku_04,QUARANTINE,QUARANTINE,1,0,32.19,165,24862.4,1,Row 2: no SKU,qwen2.5:3b,1
+synthetic,SYN,syn_hard_sku_05,QUARANTINE,QUARANTINE,1,0,34.02,172,26728.4,1,Row 2: SKU SDR-120-12 not in catalog,qwen2.5:3b,1
+synthetic,SYN,syn_hard_sku_06,QUARANTINE,QUARANTINE,1,0,39.36,174,29882.3,1,Row 2: SKU LED-A21-9W not in catalog,qwen2.5:3b,1

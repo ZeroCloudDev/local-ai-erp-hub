@@ -1,0 +1,9 @@
+﻿Diagnostic 2026-10-25, ProBook, Ollama 0.40.7, qwen3:4b think=False, message syn_hard_noqty_06, 3 calls (scratchpad raw_nothink.py = scratch/raw_response_check.py + disable_thinking).
+TEXT: team, Carlos here, Grainger for Job #504: 6x ESP32-S3 Module (SKU: ESP32-S3-WROOM-1) at $3.90 each (line total $23.40), plus however many they had of AGM Battery H6 (AGM-H6) at $199.99 each, didn't count them.
+Raw JSON in all calls: one item (ESP32), AGM-H6 line omitted, stated_total null.
+ITEMS: [('ESP32-S3-WROOM-1', 6.0, 3.9, 23.4)] total: None
+BENCHMARK: ('APPROVED', False, '')
+ITEMS: [('ESP32-S3-WROOM-1', 6.0, 3.9, 23.4)] total: None
+BENCHMARK: ('APPROVED', False, '')
+ITEMS: [('ESP32-S3-WROOM-1', 6.0, 3.9, 23.4)] total: None
+BENCHMARK: ('APPROVED', False, '')

@@ -44,3 +44,6 @@ ep05_fiscal_ingest_robot/.ep05_db_password
 
 # EP05 watcher smoke-test runtime data (never published)
 data/ep05_watcher_smoke/
+
+# Model shootout: trial runs stay local; the final CSV for a video is added with git add -f
+benchmarks/results/
